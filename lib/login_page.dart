@@ -1,3 +1,5 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:exercise1_paml_140/home_page.dart';
 import 'package:exercise1_paml_140/register_page.dart';
 import 'package:flutter/material.dart';
@@ -166,7 +168,7 @@ class _LoginPageState extends State<LoginPage> {
                         }
                       },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.yellow,
+                          backgroundColor: Colors.yellow,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50),
                           ),

@@ -1,4 +1,4 @@
-import 'package:exercise1_paml_140/onboarding_page.dart';
+import 'package:exercise1_paml_140/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const OnBoardingPage(),
+      home: HomePage(name: 'ahmad'),
     );
   }
 }

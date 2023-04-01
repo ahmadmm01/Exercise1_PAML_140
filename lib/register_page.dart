@@ -1,5 +1,6 @@
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:exercise1_paml_140/home_page.dart';
-import 'package:exercise1_paml_140/login_page.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatefulWidget {
@@ -15,9 +16,9 @@ class _RegisterPageState extends State<RegisterPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   final _repasswordController = TextEditingController();
+  final String _errorMessage = '';
   bool _passwordVisible = false;
   bool _repasswordVisible = false;
-  String _errorMessage = '';
   String name = '';
   String? username;
   String? pass;
@@ -39,14 +40,14 @@ class _RegisterPageState extends State<RegisterPage> {
                   onPressed: (){
                     Navigator.pop(context);
                   },
-                  child: const Icon(Icons.arrow_back),
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.yellow,
+                    backgroundColor: Colors.yellow,
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(15),
                     ),
                     minimumSize: const Size(50,60),
                   ),
+                  child: const Icon(Icons.arrow_back),
                 ),
               ),
               const SizedBox(height: 30),
@@ -68,7 +69,7 @@ class _RegisterPageState extends State<RegisterPage> {
                 ),
                 textAlign: TextAlign.center,
               ),
-              const SizedBox(height: 30),
+              const SizedBox(height: 50),
               Form(
                 key: _formKey,
                 child: Column(
@@ -250,13 +251,11 @@ class _RegisterPageState extends State<RegisterPage> {
                               )
                             );
                         } else {
-                            setState(() {  
-                            _errorMessage ='Please try again.';
-                            });
-                          }
+                          return;
+                        }
                       },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.yellow,
+                          backgroundColor: Colors.yellow,
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(50),
                           ),
