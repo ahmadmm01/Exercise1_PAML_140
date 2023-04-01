@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:exercise1_paml_140/login_page.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class OnBoardingPage extends StatelessWidget {
+  const OnBoardingPage({super.key});
 
   @override
   Widget build(BuildContext context)
@@ -11,7 +12,6 @@ class LoginPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.center,
-          // ignore: prefer_const_literals_to_create_immutables
           children: [
             const SizedBox(height: 50),
             const Text(
@@ -50,9 +50,10 @@ class LoginPage extends StatelessWidget {
               },
               style: ElevatedButton.styleFrom(
                 shape: const CircleBorder(),
-                backgroundColor: Colors.yellow
+                backgroundColor: Colors.yellow,
+                fixedSize: const Size.square(60)
               ),
-              child: const Icon(Icons.arrow_forward),
+              child: const Icon(Icons.arrow_forward, size: 30,),
             ),
               ),
             ),
