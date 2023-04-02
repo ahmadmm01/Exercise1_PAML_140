@@ -91,3 +91,4 @@ flutter:
 
   assets:
     - android/assets/images/
+    - android/assets/images/pokemon/
